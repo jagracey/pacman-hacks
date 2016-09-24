@@ -1,0 +1,440 @@
+@import url(http://fonts.googleapis.com/css?family=Megrim);
+/*
+	MIXINS
+*/
+/*
+	ANIMATIONS
+*/
+@keyframes wiggle {
+  0% {
+    bottom: -15px;
+  }
+  100% {
+    bottom: -16px;
+  }
+}
+@-webkit-keyframes wiggle {
+  0% {
+    bottom: -15px;
+  }
+  100% {
+    bottom: -16px;
+  }
+}
+@keyframes lookup {
+  0% {
+    margin: 4px 0 0 0;
+  }
+  100% {
+    margin: 0;
+  }
+}
+@keyframes lookcenter {
+  0% {
+    margin: 4px 0 0 0;
+  }
+  100% {
+    margin: 4px 0 0 8px;
+  }
+}
+@keyframes lookdown {
+  0% {
+    margin: 4px 0 0 0;
+  }
+  100% {
+    margin: 8px 0 0 0;
+  }
+}
+@-webkit-keyframes lookup {
+  0% {
+    margin: 4px 0 0 0;
+  }
+  100% {
+    margin: 0;
+  }
+}
+@-webkit-keyframes lookcenter {
+  0% {
+    margin: 4px 0 0 0;
+  }
+  100% {
+    margin: 4px 0 0 8px;
+  }
+}
+@-webkit-keyframes lookdown {
+  0% {
+    margin: 4px 0 0 0;
+  }
+  100% {
+    margin: 8px 0 0 0;
+  }
+}
+@keyframes chomp {
+  0% {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    bottom: 30px;
+  }
+  90% {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    bottom: 30px;
+  }
+  100% {
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    bottom: 60px;
+  }
+}
+@-webkit-keyframes chomp {
+  0% {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    bottom: 30px;
+  }
+  90% {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    bottom: 30px;
+  }
+  100% {
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    bottom: 60px;
+  }
+}
+@keyframes beadyeyes {
+  0% {
+    width: 12px;
+    height: 12px;
+  }
+  10% {
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    width: 20px;
+    height: 20px;
+  }
+}
+@-webkit-keyframes beadyeyes {
+  0% {
+    width: 12px;
+    height: 12px;
+  }
+  10% {
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    width: 20px;
+    height: 20px;
+  }
+}
+/*
+	PACMAN STYLES
+*/
+body {
+  background: #000000;
+}
+#containter {
+  margin: 0 auto;
+  width: 900px;
+  overflow: hidden;
+  background: #000000;
+  zoom: 1;
+}
+#containter:before,
+#containter:after {
+  content: " ";
+  display: table;
+}
+#containter:after {
+  clear: both;
+}
+h1 {
+  margin: 20px 0;
+  padding: 0;
+  font-family: 'Megrim', cursive;
+  font-size: 48px;
+  color: yellow;
+  text-align: center;
+}
+.characters {
+  margin: auto;
+  padding: 20px 0 0 0;
+  width: 800px;
+  zoom: 1;
+}
+.characters:before,
+.characters:after {
+  content: " ";
+  display: table;
+}
+.characters:after {
+  clear: both;
+}
+.pacman {
+  margin-right: 200px;
+  width: 120px;
+  height: 120px;
+  float: left;
+  position: relative;
+  background: yellow;
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+}
+.pacman .eye {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 36px;
+  background: #000000;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+.pacman .mouth {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  bottom: 30px;
+  right: 0px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 60px solid #000000;
+  animation-name: chomp;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: initial;
+  -webkit-animation-name: chomp;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: initial;
+}
+.ghost {
+  margin: 0 10px;
+  width: 100px;
+  height: 100px;
+  float: left;
+  position: relative;
+  background: #ff0000;
+  border-radius: 50px 50px 0 0;
+  -webkit-border-radius: 50px 50px 0 0;
+  -moz-border-radius: 50px 50px 0 0;
+}
+.ghost .eyes {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+.ghost .eyes > div {
+  margin: 0 4px;
+  width: 25px;
+  height: 27px;
+  float: left;
+  background: #ffffff;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+}
+.ghost .eyes .ball {
+  margin: 4px 0 0 0;
+  width: 15px;
+  height: 15px;
+  background: #0000ff;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+}
+.ghost .bottom {
+  position: absolute;
+  bottom: -15px;
+}
+.ghost .bottom .frill {
+  margin-right: -4px;
+  width: 36px;
+  height: 36px;
+  float: left;
+  background: #ff0000;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+}
+.blinky {
+  background: red;
+}
+.blinky .eyes .ball {
+  animation-name: lookdown;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: lookdown;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+.blinky .bottom {
+  animation-name: wiggle;
+  animation-duration: 2s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: wiggle;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+.blinky .bottom .frill {
+  background: red;
+}
+.pinky {
+  background: pink;
+}
+.pinky .eyes .ball {
+  animation-name: lookup;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: lookup;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+.pinky .bottom {
+  animation-name: wiggle;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: wiggle;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+.pinky .bottom .frill {
+  background: pink;
+}
+.inky {
+  background: lightblue;
+}
+.inky .eyes .ball {
+  animation-name: lookdown;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: lookdown;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+.inky .bottom {
+  animation-name: wiggle;
+  animation-duration: 2s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: wiggle;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+.inky .bottom .frill {
+  background: lightblue;
+}
+.clyde {
+  background: darkorange;
+}
+.clyde .eyes .ball {
+  animation-name: lookcenter;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: lookcenter;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+.clyde .bottom {
+  animation-name: wiggle;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: wiggle;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+.clyde .bottom .frill {
+  background: darkorange;
+}
+.floor {
+  padding: 10px 0;
+  zoom: 1;
+}
+.floor:before,
+.floor:after {
+  content: " ";
+  display: table;
+}
+.floor:after {
+  clear: both;
+}
+.floor .break {
+  width: 42%;
+  height: 30px;
+  float: left;
+  background: #000000;
+  box-shadow: 0px 0px 12px #0000ff inset;
+  -webkit-box-shadow: 0px 0px 12px #0000ff inset;
+  -moz-box-shadow: 0px 0px 12px #0000ff inset;
+}
+.floor .left {
+  margin-right: 18%;
+  margin-left: -10px;
+  border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 10px 10px 0;
+  -moz-border-radius: 0 10px 10px 0;
+}
+.floor .right {
+  margin-right: -10px;
+  border-radius: 10px 0 0 10px;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+}
+
+.pacman-pic {
+    padding: 5px;
+    top: 50%;
+    left: 50%;
+}
+
+#blinky-btn {
+      background-color: #f44336;
+    }
+    /*#f8bbd0*/
+#pinky-btn {
+      background-color: #f48fb1;
+    }
+#inky-btn {
+      background-color: #80deea;
+    }
+
+#clyde-btn {
+      background-color: #ffa726;
+    }
