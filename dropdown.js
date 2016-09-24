@@ -10,34 +10,15 @@ $(document).ready(function(){
     'clyde': 9
   };
 
-  var count = 0;
-  var countEl = document.getElementById("count");
-
   var handlers = {
     plus: function (ghost) {
       return bets[ghost] += 1;
     },
     minus: function (ghost) {
-      if (count > 0) {
-        return bets[ghost] -= 1;
-      }
-
+      if (count > 0) { return bets[ghost] -= 1; }
       return bets[ghost];
     }
-
   };
-  // function plus(ghost){
-  //     bets[ghost] += 1;
-  //     // count++;
-  //     // countEl.value = count;
-  // }
-  // function minus(ghost){
-  //   if (count > 0) {
-  //     bets[ghost] -= 1;
-  //     // count--;
-  //     // countEl.value = count;
-  //   }
-  // }
 
   $('#blinky-btn').on('click', function addBet(e) {
     e.preventDefault();
@@ -47,41 +28,20 @@ $(document).ready(function(){
 
   $('#pinky-btn').on('click', function addBet(e) {
     e.preventDefault();
-    console.log('>>> pinky here');
-
-    // bets['pinky'] += 1;
-    // $('#pinky-bets').text(bets['blinky']);
-    var newBet = new Promise(handlers.plus('pinky'));
-
-    newBet.then(function updateBetCount(val) {
-      $('#pinky-bets').text(bets['pinky']);
-    });
+    // console.log('>>> pinky here');
+    $('#pinky-bets').text(handlers.plus('pinky'));
   });
 
   $('#inky-btn').on('click', function addBet(e) {
     e.preventDefault();
-    console.log('>>> inky here');
-
-    // bets['inky'] += 1;
-    // $('#inky-bets').text(bets['blinky']);
-    var newBet = new Promise(handlers.plus('inky'));
-
-    newBet.then(function updateBetCount(val) {
-      $('#inky-bets').text(bets['inky']);
-    });
+    // console.log('>>> inky here');
+    $('#inky-bets').text(handlers.plus('inky'));
   });
 
   $('#clyde-btn').on('click', function addBet(e) {
     e.preventDefault();
-    console.log('>>> clyde here');
-
-    // bets['clyde'] += 1;
-    // $('#clyde-bets').text(bets['blinky']);
-    var newBet = new Promise(handlers.plus('clyde'));
-
-    newBet.then(function updateBetCount(val) {
-      $('#clyde-bets').text(bets['clyde']);
-    });
+    // console.log('>>> clyde here');
+    $('#clyde-bets').text(handlers.plus('clyde'));
   });
 
  });
