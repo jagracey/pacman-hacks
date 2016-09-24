@@ -27,74 +27,81 @@
         </div>
       <div class="collapsible-body">
 
-      <div class="btn-one">
-        <a id="blinky-btn" class="waves-effect waves-light btn-large" input type="button" value="0" id="plus" onclick="plus()">
-          Blinky <span class="new badge" data-badge-caption="bets">4</span>
-        </a>
-      </div>
-
-      <div>
-
-        <a id="pinky-btn" class="waves-effect waves-light btn-large">
-          Pinky
-        </a>
-        <a id="inky-btn" class="waves-effect waves-light btn-large">
-          Inky
-        </a>
-        <a id="clyde-btn" class="waves-effect waves-light btn-large">
-          Clyde
-        </a>
+        <div class="containter">
+          <div class="waves-effect waves-light btn-large blinky-color">
+            Blinky <span class="bet-count" id="blinky-bets">4</span>
+          </div>
+          <div class="waves-effect waves-light btn-large pinky-color">
+            Pinky <span class="bet-count" id="pinky-bets">3</span>
+          </div>
+          <div class="waves-effect waves-light btn-large inky-color">
+            Inky <span class="bet-count" id="inky-bets">7</span>
+          </div>
+          <div class="waves-effect waves-light btn-large clyde-color">
+            Clyde <span class="bet-count" id="clyde-bets">9</span>
+          </div>
+        </div>
 
         <div id="containter">
           <div class="characters">
             
-            <div class="ghost blinky">
-              <div class="eyes">
-                <div class="eye_lt"><div class="ball"></div></div>
-                <div class="eye_rt"><div class="ball"></div></div>
+            <a class="blinky-color" id="blinky-btn" href="#">
+              <div >
+                <div class="ghost blinky">
+                  <div class="eyes">
+                    <div class="eye_lt"><div class="ball"></div></div>
+                    <div class="eye_rt"><div class="ball"></div></div>
+                  </div>
+                  <div class="bottom">
+                    <div class="frill"></div>
+                    <div class="frill"></div>
+                    <div class="frill"></div>
+                  </div>
+                </div>
               </div>
-              <div class="bottom">
-                <div class="frill"></div>
-                <div class="frill"></div>
-                <div class="frill"></div>
-              </div>
-            </div>
+            </a>
 
-            <div class="ghost pinky">
-              <div class="eyes">
-                <div class="eye_lt"><div class="ball"></div></div>
-                <div class="eye_rt"><div class="ball"></div></div>
+            <a class="pinky-color" id="pinky-btn" href="#">
+              <div class="ghost pinky">
+                <div class="eyes">
+                  <div class="eye_lt"><div class="ball"></div></div>
+                  <div class="eye_rt"><div class="ball"></div></div>
+                </div>
+                <div class="bottom">
+                  <div class="frill"></div>
+                  <div class="frill"></div>
+                  <div class="frill"></div>
+                </div>
               </div>
-              <div class="bottom">
-                <div class="frill"></div>
-                <div class="frill"></div>
-                <div class="frill"></div>
-              </div>
-            </div>
+            </a>
 
-            <div class="ghost inky">
-              <div class="eyes">
-                <div class="eye_lt"><div class="ball"></div></div>
-                <div class="eye_rt"><div class="ball"></div></div>
+            <a class="inky-color" id="inky-btn" href="#">
+              <div class="ghost inky">
+                <div class="eyes">
+                  <div class="eye_lt"><div class="ball"></div></div>
+                  <div class="eye_rt"><div class="ball"></div></div>
+                </div>
+                <div class="bottom">
+                  <div class="frill"></div>
+                  <div class="frill"></div>
+                  <div class="frill"></div>
+                </div>
               </div>
-              <div class="bottom">
-                <div class="frill"></div>
-                <div class="frill"></div>
-                <div class="frill"></div>
-              </div>
-            </div>
+            </a>
 
-            <div class="ghost clyde">
-              <div class="eyes">
-                <div class="eye_lt"><div class="ball"></div></div>
-                <div class="eye_rt"><div class="ball"></div></div>
+            <a class="clyde-color" id="clyde-btn" href="#">
+              <div class="ghost clyde">
+                <div class="eyes">
+                  <div class="eye_lt"><div class="ball"></div></div>
+                  <div class="eye_rt"><div class="ball"></div></div>
+                </div>
+                <div class="bottom">
+                  <div class="frill"></div>
+                  <div class="frill"></div>
+                  <div class="frill"></div>
+                </div>
               </div>
-              <div class="bottom">
-                <div class="frill"></div>
-                <div class="frill"></div>
-                <div class="frill"></div>
-              </div>
-            </div>
+            </a>
 
           </div>
           <div class="floor">
