@@ -1,14 +1,15 @@
+
+var bets = {
+  'blinky': 4,
+  'pinky': 3,
+  'inky': 7,
+  'clyde': 9
+};
+
 $(document).ready(function(){
   $('.collapsible').collapsible({
     accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
   });
-
-  var bets = {
-    'blinky': 4,
-    'pinky': 3,
-    'inky': 7,
-    'clyde': 9
-  };
 
   var handlers = {
     plus: function (ghost) {
@@ -19,6 +20,11 @@ $(document).ready(function(){
       return bets[ghost];
     }
   };
+
+  $('#blinky-bets').text(bets['blinky']);
+  $('#pinky-bets').text(bets['pinky']);
+  $('#inky-bets').text(bets['inky']);
+  $('#clyde-bets').text(bets['clyde']);
 
   $('#blinky-btn').on('click', function addBet(e) {
     e.preventDefault();
