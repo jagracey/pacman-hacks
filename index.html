@@ -10,87 +10,159 @@
 </head>
 <body>
 <!-- Dropdown Trigger -->
- <a class='dropdown-button btn waves-green' href='#' data-activates='dropdown-bet'>Drop down</a>
+  <a class='dropdown-button btn waves-green' href='#' data-activates='dropdown-bet'>Drop down</a>
 
- <!-- Dropdown Structure -->
- <ul id='dropdown-bet' class='dropdown-content'>
-   <li><a href="#!">one</a></li>
-   <li><a href="#!">two</a></li>
-   <li class="divider"></li>
-   <li><a href="#!">three</a></li>
- </ul>
- <ul class="collapsible collapsible-header active" data-collapsible="accordion">
-     <li>
-       <div class="collapsible-header"><i class="material-icons"></i>Place Bet</div>
-       <div class="collapsible-body">
+  <!-- Dropdown Structure -->
+  <ul id='dropdown-bet' class='dropdown-content'>
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
+  </ul>
 
-         <div class="btn-one">
-           <a id="blinky-btn" class="waves-effect waves-light btn-large" input type="button" value="0" id="plus" onclick="plus()">Blinky<span class="new badge" data-badge-caption="bets">4</span></a>
+  <ul class="collapsible collapsible-header active" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons"></i>Place Bet
+        </div>
+      <div class="collapsible-body">
+
+      <div class="btn-one">
+        <a id="blinky-btn" class="waves-effect waves-light btn-large" input type="button" value="0" id="plus" onclick="plus()">
+          Blinky <span class="new badge" data-badge-caption="bets">4</span>
+        </a>
+      </div>
+
+      <div>
+
+        <a id="pinky-btn" class="waves-effect waves-light btn-large">
+          Pinky
+        </a>
+        <a id="inky-btn" class="waves-effect waves-light btn-large">
+          Inky
+        </a>
+        <a id="clyde-btn" class="waves-effect waves-light btn-large">
+          Clyde
+        </a>
+
+        <div id="containter">
+          <div class="characters">
+            
+            <div class="ghost blinky">
+              <div class="eyes">
+                <div class="eye_lt"><div class="ball"></div></div>
+                <div class="eye_rt"><div class="ball"></div></div>
+              </div>
+              <div class="bottom">
+                <div class="frill"></div>
+                <div class="frill"></div>
+                <div class="frill"></div>
+              </div>
+            </div>
+
+            <div class="ghost pinky">
+              <div class="eyes">
+                <div class="eye_lt"><div class="ball"></div></div>
+                <div class="eye_rt"><div class="ball"></div></div>
+              </div>
+              <div class="bottom">
+                <div class="frill"></div>
+                <div class="frill"></div>
+                <div class="frill"></div>
+              </div>
+            </div>
+
+            <div class="ghost inky">
+              <div class="eyes">
+                <div class="eye_lt"><div class="ball"></div></div>
+                <div class="eye_rt"><div class="ball"></div></div>
+              </div>
+              <div class="bottom">
+                <div class="frill"></div>
+                <div class="frill"></div>
+                <div class="frill"></div>
+              </div>
+            </div>
+
+            <div class="ghost clyde">
+              <div class="eyes">
+                <div class="eye_lt"><div class="ball"></div></div>
+                <div class="eye_rt"><div class="ball"></div></div>
+              </div>
+              <div class="bottom">
+                <div class="frill"></div>
+                <div class="frill"></div>
+                <div class="frill"></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="floor">
+          </div>
         </div>
 
-         <a id="pinky-btn" class="waves-effect waves-light btn-large">Pinky</a>
-         <a id="inky-btn" class="waves-effect waves-light btn-large">Inky</a>
-         <a id="clyde-btn" class="waves-effect waves-light btn-large">Clyde</a>
-   </div>
- </li>
-</ul>
+      </div>
+    </li>
+  </ul>
 
 
- <div id="containter">
+<div id="containter">
  	<h1>pacman</h1>
  	<div class="characters">
- 		<div class="pacman">
+ 		
+    <div class="pacman">
  			<div class="eye"></div>
  			<div class="mouth"></div>
  		</div>
+
  		<div class="ghost blinky">
  			<div class="eyes">
  				<div class="eye_lt"><div class="ball"></div></div>
  				<div class="eye_rt"><div class="ball"></div></div>
  			</div>
-
  			<div class="bottom">
  				<div class="frill"></div>
  				<div class="frill"></div>
  				<div class="frill"></div>
  			</div>
  		</div>
+
  		<div class="ghost pinky">
  			<div class="eyes">
  				<div class="eye_lt"><div class="ball"></div></div>
  				<div class="eye_rt"><div class="ball"></div></div>
  			</div>
-
  			<div class="bottom">
  				<div class="frill"></div>
  				<div class="frill"></div>
  				<div class="frill"></div>
  			</div>
  		</div>
+
  		<div class="ghost inky">
  			<div class="eyes">
  				<div class="eye_lt"><div class="ball"></div></div>
  				<div class="eye_rt"><div class="ball"></div></div>
  			</div>
-
  			<div class="bottom">
  				<div class="frill"></div>
  				<div class="frill"></div>
  				<div class="frill"></div>
  			</div>
  		</div>
+
  		<div class="ghost clyde">
  			<div class="eyes">
  				<div class="eye_lt"><div class="ball"></div></div>
  				<div class="eye_rt"><div class="ball"></div></div>
  			</div>
-
  			<div class="bottom">
  				<div class="frill"></div>
  				<div class="frill"></div>
  				<div class="frill"></div>
  			</div>
  		</div>
+
  	</div>
 
  	<div class="floor">
@@ -98,34 +170,35 @@
  		<div class="break right"></div>
  	</div>
 
- </div>
+</div>
 
- <div id="containter">
-   <div class="row">
-     <div class="col s12 m4 l2"></div>
-     <div class="col s12 m8">
-         <div class="card horizontal blue-grey darken-1">
-           <div class="card-image">
-             <img src="http://www.gracecentered.com/wp-content/uploads/2012/11/pacman_game.png" class="pacman-pic">
-           </div>
-           <div class="card-stacked">
-             <div class="card-content white-text">
-               <p><b>Min bet:</b>     50pts</p>
-               <br>
-               <p><b>Current Players:</b>     89</p>
-             </div>
-             <div class="card-action">
-               <a href="#">Join Game!</a>
-             </div>
-           </div>
-         </div>
-       </div>
-       <div class="col s12 m4 l2"></div>
-     </div>
- </div>
- <div id="containter">
-   <div class="row">
-     <div class="col s12 m4 l2"></div>
+<div id="containter">
+  <div class="row">
+    <div class="col s12 m4 l2"></div>
+    <div class="col s12 m8">
+      <div class="card horizontal blue-grey darken-1">
+        <div class="card-image">
+          <img src="http://www.gracecentered.com/wp-content/uploads/2012/11/pacman_game.png" class="pacman-pic">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content white-text">
+            <p><b>Min bet:</b>     50pts</p>
+            <br>
+            <p><b>Current Players:</b>     89</p>
+          </div>
+          <div class="card-action">
+            <a href="#">Join Game!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4 l2"></div>
+  </div>
+</div>
+
+<div id="containter">
+  <div class="row">
+    <div class="col s12 m4 l2"></div>
      <div class="col s12 m8">
          <div class="card horizontal blue-grey darken-1">
            <div class="card-image">
@@ -146,6 +219,7 @@
        <div class="col s12 m4 l2"></div>
      </div>
  </div>
+
  <div id="containter">
    <div class="row">
      <div class="col s12 m4 l2"></div>
@@ -172,8 +246,8 @@
 
 
 <div id="app"></div>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-      <script type="text/javascript" src="dropdown.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <script type="text/javascript" src="dropdown.js"></script>
 </body>
 </html>
