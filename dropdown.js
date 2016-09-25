@@ -30,7 +30,7 @@ var handlers = {
     return (( parseFloat(bets[ghost]) / handlers.totalBets(bets) ) * 100).toFixed(2);
   },
   playerPayout: function (bets) {
-    return minBet * handlers.totalBets(bets) / parseFloat(bets[winner]);
+    return (minBet * handlers.totalBets(bets) / parseFloat(bets[winner])).toFixed(2);
   },
   updateTotalPts: function (bets) {
     $('#total-pts').text(minBet * handlers.totalBets(bets));
