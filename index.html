@@ -24,7 +24,7 @@
     <li>
       <div class="collapsible-header">
         <i class="material-icons"></i>Place Bet
-        </div>
+      </div>
       <div class="collapsible-body">
 
         <div class="containter">
@@ -34,20 +34,52 @@
           <div class="waves-effect waves-light btn-large blinky-color">
             Total Pts: <span class="bet-points" id="total-bets">0</span>
           </div>
+          <a class="" id="win-btn" href="#">
+            <div class="waves-effect waves-light btn-large">
+              Winner? <span class="bet-points" id="winner"></span>
+            </div>
+          </a>
+          <div class="waves-effect waves-light btn-large">
+            Payout Pts per person: <span class="bet-points" id="payout">0</span>
+          </div>
         </div>
 
         <div class="containter">
-          <div class="waves-effect waves-light btn-large blinky-color">
-            Blinky <span class="bet-count" id="blinky-bets">0</span>
+          <div class="waves-effect waves-light blinky-color">
+            <h4>BLINKY</h4>
+            <div> 
+              bets: <span class="bet-count" id="blinky-bets">0</span>
+            </div> 
+            <div> 
+              votes: <span id="blinky-percent">0</span>%
+            </div>
           </div>
-          <div class="waves-effect waves-light btn-large pinky-color">
-            Pinky <span class="bet-count" id="pinky-bets">0</span>
+          <div class="waves-effect waves-light pinky-color">
+            <h4>PINKY</h4>
+            <div> 
+              bets: <span class="bet-count" id="pinky-bets">0</span>
+            </div> 
+            <div> 
+              votes: <span id="pinky-percent">0</span>%
+            </div>
           </div>
-          <div class="waves-effect waves-light btn-large inky-color">
-            Inky <span class="bet-count" id="inky-bets">0</span>
+          <div class="waves-effect waves-light inky-color">
+            <h4>INKY</h4>
+            <div> 
+              bets: <span class="bet-count" id="inky-bets">0</span>
+            </div> 
+            <div> 
+              votes: <span id="inky-percent">0</span>%
+            </div>
           </div>
-          <div class="waves-effect waves-light btn-large clyde-color">
-            Clyde <span class="bet-count" id="clyde-bets">0</span>
+          <div class="waves-effect waves-light clyde-color">
+            <h4>CLYDE</h4>
+            <div> 
+              bets: <span class="bet-count" id="clyde-bets">0</span>
+            </div> 
+            <div> 
+              votes: <span id="clyde-percent">0</span>%
+            </div>
           </div>
         </div>
 
@@ -55,17 +87,15 @@
           <div class="characters">
             
             <a class="blinky-color" id="blinky-btn" href="#">
-              <div >
-                <div class="ghost blinky">
-                  <div class="eyes">
-                    <div class="eye_lt"><div class="ball"></div></div>
-                    <div class="eye_rt"><div class="ball"></div></div>
-                  </div>
-                  <div class="bottom">
-                    <div class="frill"></div>
-                    <div class="frill"></div>
-                    <div class="frill"></div>
-                  </div>
+              <div class="ghost blinky">
+                <div class="eyes">
+                  <div class="eye_lt"><div class="ball"></div></div>
+                  <div class="eye_rt"><div class="ball"></div></div>
+                </div>
+                <div class="bottom">
+                  <div class="frill"></div>
+                  <div class="frill"></div>
+                  <div class="frill"></div>
                 </div>
               </div>
             </a>
