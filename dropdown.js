@@ -22,7 +22,7 @@ var handlers = {
     return bets[ghost];
   },
   totalBets: function (bets) {
-    return minBet * Object.keys(bets).reduce(function (sum, key) {
+    return Object.keys(bets).reduce(function (sum, key) {
       return sum + parseFloat(bets[key]);
     }, 0);
   },
@@ -30,7 +30,11 @@ var handlers = {
     return ( parseFloat(bets[ghost]) / handlers.totalBets(bets) ) * 100;
   },
   playerPayout: function (bets) {
-    return handlers.totalBets(bets) / parseFloat(bets[winner]);
+    return minBet * handlers.totalBets(bets) / parseFloat(bets[winner]);
+  },
+  updateTotalPts: function (bets) {
+    $('#total-pts').text(minBet * handlers.totalBets(bets));
+    return true;
   },
   updatePercentages: function (bets) {
     $('#blinky-percent').text(handlers.betPercent(bets, 'blinky'));
@@ -50,41 +54,37 @@ $(document).ready(function(){
   $('#pinky-bets').text(bets['pinky']);
   $('#inky-bets').text(bets['inky']);
   $('#clyde-bets').text(bets['clyde']);
-  $('#total-bets').text(0);
+  $('#total-pts').text(0);
 
   $('#blinky-btn').on('click', function addBet(e) {
     e.preventDefault();
     $('#blinky-bets').text(handlers.plus('blinky'));
-    $('#total-bets').text(handlers.totalBets(bets));
-    // $('#blinky-percent').text(handlers.betPercent(bets, 'blinky'));
+    handlers.updateTotalPts(bets);
     handlers.updatePercentages(bets);
   });
 
   $('#pinky-btn').on('click', function addBet(e) {
     e.preventDefault();
     $('#pinky-bets').text(handlers.plus('pinky'));
-    $('#total-bets').text(handlers.totalBets(bets));
-    // $('#pinky-percent').text(handlers.betPercent(bets, 'pinky'));
+    handlers.updateTotalPts(bets);
     handlers.updatePercentages(bets);
   });
 
   $('#inky-btn').on('click', function addBet(e) {
     e.preventDefault();
     $('#inky-bets').text(handlers.plus('inky'));
-    $('#total-bets').text(handlers.totalBets(bets));
-    // $('#inky-percent').text(handlers.betPercent(bets, 'inky'));
+    handlers.updateTotalPts(bets);
     handlers.updatePercentages(bets);
   });
 
   $('#clyde-btn').on('click', function addBet(e) {
     e.preventDefault();
     $('#clyde-bets').text(handlers.plus('clyde'));
-    $('#total-bets').text(handlers.totalBets(bets));
-    // $('#clyde-percent').text(handlers.betPercent(bets, 'clyde'));
+    handlers.updateTotalPts(bets);
     handlers.updatePercentages(bets);
   });
 
-
+  // calculate a winner and payout
   $('#win-btn').on('click', function calculateWin(e) {
     e.preventDefault();
     $('#winner').text(handlers.randomWin());
