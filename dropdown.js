@@ -27,7 +27,7 @@ var handlers = {
     }, 0);
   },
   betPercent: function (bets, ghost) {
-    return ( parseFloat(bets[ghost]) / handlers.totalBets(bets) ) * 100;
+    return ( parseFloat(bets[ghost]) / handlers.totalBets(bets) ).toFixed(2) * 100;
   },
   playerPayout: function (bets) {
     return minBet * handlers.totalBets(bets) / parseFloat(bets[winner]);
