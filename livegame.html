@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="styles/styles.css.scss">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body onload="timer();">
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Pic-a-Pac</a>
@@ -30,6 +31,7 @@
         <iframe width="844" height="515" src="https://www.youtube.com/embed/-CbyAk3Sn9I" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="row" id="betting-area">
+        <a class="btn red"><i class="material-icons left timer">av_timer</i><span id="timerText">30</span></a>
           <p>betting buttons go here</p>
       </div>
     </div>
