@@ -13,7 +13,7 @@ var handlers = {
   randomWin: function () {
     winner = names[Math.floor(Math.random()*4)]
     return winner;
-  }, 
+  },
   plus: function (ghost) {
     return bets[ghost] += 1;
   },
@@ -27,7 +27,7 @@ var handlers = {
     }, 0);
   },
   betPercent: function (bets, ghost) {
-    return ( parseFloat(bets[ghost]) / handlers.totalBets(bets) ).toFixed(2) * 100;
+    return (( parseFloat(bets[ghost]) / handlers.totalBets(bets) ) * 100).toFixed(2);
   },
   playerPayout: function (bets) {
     return minBet * handlers.totalBets(bets) / parseFloat(bets[winner]);
